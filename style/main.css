@@ -1,0 +1,28 @@
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+  html, body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+.navi
+{
+  width: 94px;
+  margin-top: 40px;
+  margin-left: 8px;
+  position: absolute;
+  top: 10px;
+  z-index: 99;
+}
+.navi>button
+{
+  width: 94px;
+  height: 40px;
+  background-color: white;
+  margin-bottom: 5px;
+  border-style: none;
+}

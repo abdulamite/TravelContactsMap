@@ -3,47 +3,18 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script/main.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style/main.css">
     <meta charset="utf-8">
     <title>Travel campaign map</title>
-    <style>
-      #map {
-        height: 100%;
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
   </head>
   <body>
+    <div class="navi">
+        <button>Campus Tours</button>
+        <button>Information Packets</button>
+        <button type="button" name="button" onclick="clearMarkers()">Travel Campaign</button>
+    </div>
     <div id="map"></div>
-    <script>
-    $(document).ready(function () {
-        var map;
-        var myOptions = {
-            zoom: 5,
-            center: new google.maps.LatLng(39.828291, -97.676636)
-        };
-        map = new google.maps.Map($('#map')[0], myOptions);
-
-        var cities = ['Arcata, CA', 'Denver, Co', 'Detroit, MI','Montebello, CA','Portland, OR'];
-
-        for (var x = 0; x < cities.length; x++) {
-            $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+cities[x]+'&sensor=false', null, function (data) {
-                var p = data.results[0].geometry.location
-                var latlng = new google.maps.LatLng(p.lat, p.lng);
-                new google.maps.Marker({
-                    position: latlng,
-                    map: map
-                });
-
-            });
-        }
-
-    });
-    // code adapted from netbrains from stack overflow answered Oct 28 '13 at 17:07
-    </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAauA3pry1_VFzT92pYd7WZBnO3uJHZlBk&callback=initMap">
     </script>
