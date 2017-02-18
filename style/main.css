@@ -11,18 +11,24 @@
 
 .navi
 {
-  width: 94px;
+  padding: 15px;
+  background-color: white;
+  font-family: arial;
+  font-size: .8em;
+  width: 150px;
   margin-top: 40px;
-  margin-left: 8px;
+  margin-left: 10px;
   position: absolute;
   top: 10px;
   z-index: 99;
+  border-radius: 1.5px;
 }
-.navi>button
+.navi>h3{
+  text-align: center;
+  padding: 20px;
+}
+.navi>checkbox
 {
-  width: 94px;
-  height: 40px;
   background-color: white;
-  margin-bottom: 5px;
-  border-style: none;
+  border:none;
 }
