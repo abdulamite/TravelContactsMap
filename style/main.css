@@ -11,11 +11,10 @@
 
 .navi
 {
-  padding: 15px;
   background-color: white;
   font-family: arial;
   font-size: .8em;
-  width: 150px;
+  width: 300px;
   margin-top: 40px;
   margin-left: 10px;
   position: absolute;
@@ -23,12 +22,21 @@
   z-index: 99;
   border-radius: 1.5px;
 }
-.navi>h3{
+.navi>.top{
   text-align: center;
   padding: 20px;
+  background-color: rgb(38, 157, 75);
+  color:white;
+  font-weight: 100;
 }
-.navi>checkbox
+.navi>.filter{
+  margin-top: 20px;
+  padding-left: 15px;
+}
+.navi>.filter>input[type="checkbox"]
 {
+  margin-right: 10px;
   background-color: white;
-  border:none;
+  height: 20px;
+  width: 20px;
 }

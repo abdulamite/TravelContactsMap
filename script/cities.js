@@ -1,8 +1,9 @@
+// The purpose of this file is to hold the city data which will be referenced by the main.js file
 var cities = ["Hesperia, CA 92344",
               "Lathrop, CA 95330",
               "Palmdale,  CA 93551",
               "Banning, CA 92220",
-              "Exeter CA 93221",
+              "Exeter, CA 93221",
               "Fairfield, CA 94534",
               "Albuquerque, NM 87108",
               "Murphy, TX 75094",

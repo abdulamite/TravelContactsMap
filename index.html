@@ -5,21 +5,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style/main.css">
     <meta charset="utf-8">
-    <title>Travel campaign map</title>
+    <title>Humboldt State University Around the US</title>
   </head>
   <body>
     <div class="navi">
-      <h3>Humboldt State Around the US!</h3>
-      <input type="checkbox" >Campus Tours <br>
-      <input type="checkbox">Travel Campaign <br>
-      <input type="checkbox" id="IR">Information Requests <br>
+      <div class="top">
+        <h1>Humboldt State Around the US!</h1>
+      </div>
+      <div class="filter">
+        <input type="checkbox" >Campus Tours <br><br>
+        <input type="checkbox">Travel Campaign <br><br>
+        <input type="checkbox" id="toggle" checked>Information Requests <br><br>
+      </div>
     </div>
-    <div id="map"></div>
-
+    <div id="map">
+    </div>
     <script src="script/cities.js" charset="utf-8"></script>
     <script src="script/main.js" charset="utf-8"></script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAauA3pry1_VFzT92pYd7WZBnO3uJHZlBk&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASfVL_DLdTf3a-YNc_kAYjAcg2KAQAffM&callback=initMap">
     </script>
   </body>
 </html>
