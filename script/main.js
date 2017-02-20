@@ -6,17 +6,15 @@
 
   //This loop will go through each of the cities in the info_request_cities.js file and push the coordinates to lats,longs, and city_names arrays for information packets
   for (var x = 0; x < cities.length; x++) {
-  $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+cities[x]+'&sensor=false', null, function (data) {
-    var city = data.results[0].formatted_address;
-    city_names.push(city);
-    var p = data.results[0].geometry.location;
-    lats.push(p.lat);
-    longs.push(p.lng);
-  });
+    $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+cities[x]+'&sensor=false', null, function (data) {
+      var city = data.results[0].formatted_address;
+      city_names.push(city);
+      var p = data.results[0].geometry.location;
+      lats.push(p.lat);
+      longs.push(p.lng);
+    });
   }
 
-  tour_cities = ["Denver,CO" ,
-            "Billings, Montana"];
   // This block is used to store information about campus tours
   var tour_lats = [];
   var tour_longs = [];
@@ -24,16 +22,14 @@
   var tour_markers = [];
   //This loop will go through each of the cities in the campus_tour_cities.js file and push the coordinates to lats,longs, and city_names arrays for information packets
   for (var t = 0; t < tour_cities.length; t++) {
-  $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+tour_cities[t]+'&sensor=false', null, function (data) {
-    var city = data.results[0].formatted_address;
-    tour_city_names.push(city);
-    var p = data.results[0].geometry.location;
-    tour_lats.push(p.lat);
-    tour_longs.push(p.lng);
-  });
+    $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+tour_cities[t]+'&sensor=false', null, function (data) {
+      var city = data.results[0].formatted_address;
+      tour_city_names.push(city);
+      var p = data.results[0].geometry.location;
+      tour_lats.push(p.lat);
+      tour_longs.push(p.lng);
+    });
   }
-  console.log(tour_city_names);
-
 
   // Initialize the map callback function
   function initMap() {
